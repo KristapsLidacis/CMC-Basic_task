@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CMC basic task</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for currency in currencies %}
+                <tr>
+                    <td>{{ currency.cmc_rank }}</td>
+                    <td>{{ currency.name }}</td>
+                    <td>{{ currency.quote.EUR.price }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
